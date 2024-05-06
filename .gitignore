@@ -1,0 +1,7 @@
+*.fasl
+
+c/*.o
+c/igraph-grovel
+vendor/
+igraph/
+libigraph_lite.so
