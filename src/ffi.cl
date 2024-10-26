@@ -244,6 +244,16 @@
   :call-direct t
   :arg-checking nil)
 
+(def-foreign-call (igraph_simplify "igraph_wrapper_simplify")
+    ((graph (* igraph_t))
+     (remove_multiple igraph_bool_t)
+     (remove_loops igraph_bool_t)
+     (edge_comb (* igraph_attribute_combination_t)))
+  :returning igraph_error_t
+  :strings-convert nil
+  :call-direct t
+  :arg-checking nil)
+
 ;;; Vectors
 (def-foreign-call (igraph_vector_init "igraph_wrapper_vector_init")
     ((v (* igraph_vector_t))
