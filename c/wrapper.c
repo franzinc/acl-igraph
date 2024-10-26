@@ -104,6 +104,12 @@ IGRAPH_EXPORT igraph_error_t igraph_wrapper_add_edges(
   return igraph_add_edges(graph, edges, attr);
 }
 
+IGRAPH_EXPORT igraph_error_t igraph_wrapper_simplify(
+    igraph_t *graph, igraph_bool_t remove_multiple, igraph_bool_t remove_loops,
+    const igraph_attribute_combination_t *edge_comb) {
+  return igraph_simplify(graph, remove_multiple, remove_loops, edge_comb);
+}
+
 /* Vector */
 IGRAPH_EXPORT igraph_error_t igraph_wrapper_vector_init(igraph_vector_t *v,
                                                         igraph_integer_t size) {
